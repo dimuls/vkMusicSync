@@ -1,0 +1,24 @@
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+
+<id>ru.vkmusicsync.vkMusicSync</id>
+<name>vkMusicSync</name>
+<version>0.1</version>
+<publisher>vchernov</publisher>
+<url>http://vk.com/dimuls/</url>
+<icon>default_app_logo.png</icon>
+<copyright>2014 by vchernov</copyright>
+
+<window>
+  <id>main</id>
+  <title>vkMusicSync v0.1</title>
+  <url>app://login.html</url>
+  <width>400</width>
+  <height>200</height>
+  <fullscreen>false</fullscreen>
+  <resizable>false</resizable>
+  <chrome scrollbars="false">true</chrome>
+  <maximizable>false</maximizable>
+  <minimizable>false</minimizable>
+  <closeable>true</closeable>
+</window>
+</ti:app>

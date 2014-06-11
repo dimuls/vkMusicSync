@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vkMusicSync v1.0: Авторизация</title>
+    <link rel="stylesheet" href="app://css/login.css">
+  </head>
+  <body>
+    <div class="form loading" data-bind="visible: loading">
+      Загрузка...
+    </div>
+    <div class="form login" data-bind="visible: !loading()">
+      <div class="row">
+        <label class="label" for="login">Логин:</label>
+        <input class="input" id="login" type="text" data-bind="value: login"/>
+      </div>
+      <div class="row">
+        <label class="label" for="password">Пароль:</label>
+        <input class="input" id="password" type="password" data-bind="value: password"/>
+      </div>
+      <div class="row buttons">
+        <div class="button" data-bind="click: authorize">Войти</div>
+      </div>
+    </div>
+    <script type='text/javascript' src="app://js/lib/jquery.js"></script>
+    <script type='text/javascript' src="app://js/lib/knockout.js"></script>
+    <script type='text/javascript' src="app://js/lib/knockout/mapping.js"></script>
+    <script type='text/javascript' src="app://js/api/authorize.js"></script>
+    <script type='text/javascript' src="app://js/login.js"></script>
+  </body>
+</html>

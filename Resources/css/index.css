@@ -1,0 +1,91 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background: black;
+}
+
+.form {
+  display: inline-block;
+  background: #222;
+  color: lightgrey;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.form.loading {
+  margin-top: 70.5px;
+}
+.form.sync-params {
+  margin-top: 39px;
+}
+.form.sync-load {
+  margin-top: 39px;
+}
+
+.label {
+  display: inline-block;
+  text-align: right;
+  width: 100px;
+}
+
+.input {
+  width: 150px;
+  border-radius: 5px;
+  background: black;
+  color: lightgrey;
+  padding: 5px;
+  border: 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  background: black;
+  color: lightgrey;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: white;
+  color: black
+}
+
+.button:active {
+  background: white;
+  padding: 3px;
+  margin: 2px;
+}
+
+.button.disabled {
+  color: grey;
+}
+
+.button.disabled:hover,
+.button.disabled:active {
+  background: black;
+  color: grey;
+  pointer: default;
+}
+
+
+.row {
+  padding: 5px 0; 
+}
+
+.row.buttons {
+  text-align: center;
+}
+
+.input.path {
+  width: 250px;
+  cursor: pointer;
+}

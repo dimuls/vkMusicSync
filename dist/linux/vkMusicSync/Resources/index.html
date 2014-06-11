@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vkMusicSync v1.0: Инициализация</title>
+    <link rel="stylesheet" href="app://css/index.css">
+  </head>
+  <body>
+
+    <!-- ko if: state() == 'init' -->
+      <div class="form loading">
+        Инициализация...
+      </div>
+    <!-- /ko -->
+
+    <!-- ko if: state() == 'params' -->
+      <div class="form sync-params">
+        <div class="row">
+          <input class="input path" readonly="" data-bind="value: path, click: choosePath" placeholder="Выберите папку загрузки"/>
+        </div>
+        <div class="row buttons">
+          <div class="button" data-bind="click: start">Загрузить</div>
+        </div>
+      </div>
+    <!-- /ko -->
+
+    <!-- ko if: state() == 'loading' -->
+      <div class="form sync-load">
+        <div class="row">
+          <label for="load-needed-count" class="label">Осталось:</label>
+          <input id="load-needed-count" class="input" readonly data-bind="value: loader.toLoad() + loader.loading()"/>
+        </div>
+        <div class="row">
+          <label for="loaded-count" class="label">Загружено:</label>
+          <input id="loaded-count" class="input" readonly data-bind="value: loader.loaded"/>
+        </div>
+      </div>
+    <!-- /ko -->
+
+    <!-- ko if: state() == 'loaded' -->
+      <div class="form loading">
+        Загрузка завершена
+      </div>
+    <!-- /ko -->
+
+    <script type='text/javascript' src="app://js/lib/underscore.js"></script>
+    <script type='text/javascript' src="app://js/lib/jquery.js"></script>
+    <script type='text/javascript' src="app://js/lib/jquery/purl.js"></script>
+    <script type='text/javascript' src="app://js/lib/knockout.js"></script>
+    <script type='text/javascript' src="app://js/lib/knockout/mapping.js"></script>
+    <script type='text/javascript' src="app://js/api/audio.js"></script>
+    <script type='text/javascript' src="app://js/index.js"></script>
+  </body>
+</html>
